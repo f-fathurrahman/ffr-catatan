@@ -87,7 +87,15 @@ John P.
 \end_layout
 
 \begin_layout Standard
-Ringkasan Kohn-Sham spin-density functional theory:
+dalam A Primer in Density Functional Theory
+\end_layout
+
+\begin_layout Subsection*
+Ringkasan Kohn-Sham spin-density functional theory
+\end_layout
+
+\begin_layout Standard
+Persamaan Kohn-Sham
 \begin_inset Formula 
 \[
 \left\{ -\frac{1}{2}\nabla^{2}+v(\mathbf{r})+u\left([n];\mathbf{r}\right)+v_{\mathrm{xc}}^{\sigma}\left(\left[n_{\uparrow},n_{\downarrow}\right];\mathbf{r}\right)\right\} \psi_{\alpha\sigma}(\mathbf{r})=\varepsilon_{\alpha\sigma}\psi_{\alpha\sigma}(\mathbf{r})
@@ -125,6 +133,309 @@ dan
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Energi total:
+\begin_inset Formula 
+\[
+E=T_{s}\left[n_{\uparrow},n_{\downarrow}\right]+\int\mathrm{d}^{3}r\ n(\mathbf{r})\ v(\mathbf{r})+U[n]+E_{\mathrm{xc}}\left[n_{\uparrow},n_{\downarrow}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energi kinetik dari sistem non-interacting
+\begin_inset Formula 
+\[
+T\left[n_{\uparrow},n_{\downarrow}\right]=\sum_{\sigma}\sum_{\alpha}\theta(\mu-\varepsilon_{\alpha\sigma})\left\langle \psi_{\alpha\sigma}\left|-\frac{1}{2}\nabla^{2}\right|\psi_{\alpha\sigma}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nilai ekspektasi dari operator 
+\begin_inset Formula $\widehat{O}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left\langle \psi_{\alpha\sigma}\left|\widehat{O}\right|\psi_{\alpha\sigma}\right\rangle =\int\mathrm{d}^{3}r\ \psi_{\alpha\sigma}^{*}(\mathbf{r})\ \widehat{O}\ \psi_{\alpha\sigma}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energi interaksi elektrostatik klasik (self-repulsion)
+\begin_inset Formula 
+\[
+U[n]=\frac{1}{2}\int\mathrm{d}^{3}r\int\mathrm{d}^{3}r'\ \frac{n(\mathbf{r})n(\mathbf{r}')}{\left|\mathbf{r}-\mathbf{r}'\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Potensial korelasi pertukaran:
+\begin_inset Formula 
+\[
+v_{\mathrm{xc}}^{\sigma}\left(\left[n_{\uparrow},n_{\downarrow}\right];\mathbf{r}\right)=\frac{\delta E_{\mathrm{xc}}}{\delta n_{\sigma}(\mathbf{r})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh, untuk aproksimasi local spin density:
+\begin_inset Formula 
+\[
+E_{\mathrm{xc}}^{\mathrm{LSD}}\left[n_{\uparrow},n_{\downarrow}\right]=\int\mathrm{d}^{3}r\ n(\mathbf{r})\ e_{\mathrm{xc}}\left(n_{\uparrow}(\mathbf{r}),n_{\downarrow}(\mathbf{r})\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk aproksimasi gradient tergeneralisasi (GGA):
+\begin_inset Formula 
+\[
+E_{\mathrm{xc}}^{\mathrm{GGA}}\left[n_{\uparrow},n_{\downarrow}\right]=\int\mathrm{d}^{3}r\ f\left(n_{\uparrow},n_{\downarrow},\nabla n_{\uparrow},\nabla n_{\downarrow}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Input 
+\begin_inset Formula $e_{\mathrm{xc}}(n_{\uparrow},n_{\downarrow})$
+\end_inset
+
+ pada LSD secara prinsip adalah unik, karena terdapat sistem di mana 
+\begin_inset Formula $n_{\uparrow}$
+\end_inset
+
+ dan 
+\begin_inset Formula $n_{\downarrow}$
+\end_inset
+
+ adalah konstan dan LSD memberikan nilai eksak pada sistem tersebut.
+ Akan tetapi, hal yang sama tidak berlaku pada GGA, sehingga tidak ada input
+ 
+\begin_inset Formula $f\left(n_{\uparrow},n_{\downarrow},\nabla n_{\uparrow},\nabla n_{\downarrow}\right)$
+\end_inset
+
+ yang unik untuk GGA.
+\end_layout
+
+\begin_layout Subsection*
+Konstruksi 
+\begin_inset Quotes eld
+\end_inset
+
+GGA Made Simple
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Idealnya, aproksimasi fungsional 
+\begin_inset Formula $E_{\mathrm{xc}}[n_{\uparrow},n_{\downarrow}]$
+\end_inset
+
+ harus memiliki seluruh persyaratan berikut:
+\end_layout
+
+\begin_layout Enumerate
+penurunan secara non-empiris, karena prinsip mekanika kuantum sudah dikenal
+ dan cukup
+\end_layout
+
+\begin_layout Enumerate
+universal, karena secara prinsip suatu fungsional harus dapat diaplikasian
+ untuk bermacam sistem (atom, molekul, dan padatan) yang memiliki karakteristik
+ ikatan kimia yang berbeda (kovalen, ionik, metalik, hidrogen, dan van der
+ Waals)
+\end_layout
+
+\begin_layout Enumerate
+sederhana, karena hanya dengan syarat ini kita mendapatkan pemahaman intuitif
+\end_layout
+
+\begin_layout Enumerate
+akurasi yang cukup agar dapat berguna untuk perhitunga pada sistem nyata
+\end_layout
+
+\begin_layout Standard
+Energi korelasi ditulis dalam bentuk berikut:
+\begin_inset Formula 
+\[
+E_{\mathrm{c}}^{\mathrm{GGA}}[n_{\uparrow},n_{\downarrow}]=\int\mathrm{d}^{3}r\ n(\mathbf{r})\left[e_{c}(r_{s},\zeta)+H(r_{s},\zeta,t)\right]
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $r_{s}$
+\end_inset
+
+ adalah parameter kerapatan lokal (radius bola dengan yang berisi rata-rata
+ satu elektron):
+\begin_inset Formula 
+\[
+r_{s}^{3}=\frac{3}{4\pi n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dan 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ adalah
+\begin_inset Formula 
+\[
+\zeta=\frac{n_{\uparrow}-n_{\downarrow}}{n_{\uparrow}+n_{\downarrow}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dan 
+\begin_inset Formula $t$
+\end_inset
+
+ adalah
+\begin_inset Formula 
+\[
+t=\frac{\left|\nabla n\right|}{2\phi k_{s}n}=\left(\frac{\pi}{4}\right)^{1/2}\left(\frac{9\pi}{4}\right)^{1/6}\frac{s}{\phi r_{s}^{1/2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+H=c_{0}\phi^{3}\ln\left\{ 1+\frac{\beta_{\mathrm{MB}}}{c_{0}}t^{2}\left[\frac{1+At^{2}}{1+At^{2}+A^{2}t^{4}}\right]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi(\zeta)=\frac{1}{2}\left[(1+\zeta)^{2/3}+(1-\zeta)^{2/3}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=\frac{\beta_{\mathrm{MB}}}{c_{0}}\frac{1}{\exp\left[-\dfrac{e_{c}(e_{s},\zeta)}{c_{0}\phi^{3}}\right]-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk bentuk fungsional pertukaran, kita dapat menggunakan hubungan penskala-spi
+n (spin-scaling relation):
+\begin_inset Formula 
+\[
+E_{x}\left[n_{\uparrow},n_{\downarrow}\right]=\frac{1}{2}E_{x}[2n_{\uparrow}]+\frac{1}{2}E_{x}[2n_{\downarrow}]
+\]
+
+\end_inset
+
+sehingga fungsionalnya harus berbentuk sebagai berikut
+\begin_inset Formula 
+\[
+E_{\mathrm{x}}^{\mathrm{GGA}}[n]=A_{x}\int\mathrm{d^{3}}r\ n^{4/3}F_{x}(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dengan 
+\begin_inset Formula $s$
+\end_inset
+
+ adalah gradien kerapatan tereduksi (reduced density gradient):
+\begin_inset Formula 
+\[
+s=\frac{\left|\nabla n\right|}{2k_{F}n}=\frac{\left|\nabla n\right|}{2(3\pi^{2})^{1/3}n^{4/3}}=\frac{3}{2}\left(\frac{4}{9\pi}\right)^{1/3}\left|\nabla r_{s}\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Limit 
+\begin_inset Formula $s\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+ memiliki bentuk sebagai berikut:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s\rightarrow0:F_{x}(s)=1+\mu s^{2}
+\]
+
+\end_inset
+
+Untuk memenuhi batas Lieb-Oxford
+\begin_inset Formula 
+\[
+F_{x}(s)=1+\kappa-\frac{\kappa}{1+\mu s^{2}/\kappa}
+\]
+
+\end_inset
+
+dengan 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ adalah suatu konstanta yang kurang dari atau sama dengan 0.804.
 \end_layout
 
 \end_body
