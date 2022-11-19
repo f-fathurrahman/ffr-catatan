@@ -29,7 +29,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
-\spacing single
+\spacing onehalf
 \use_hyperref false
 \papersize a4paper
 \use_geometry false
@@ -215,6 +215,73 @@ Untuk membuat suatu penggolong Bayes, kita perlu mendefisikan distribusi
 \end_inset
 
  distribusi kondisional kelas.
+ Praktik yang umum adalah menggunakan jenis distribusi yang sama untuk tiap
+ kelas, meskipun tidak adalah alasan khusus mengapa harus seperti ini.
+\end_layout
+
+\begin_layout Standard
+Probabilitas prior kelas
+\end_layout
+
+\begin_layout Standard
+Kuantitas ini adalah probabilitas bahwa suatu objek tertentu tergolong kelas
+ ke-
+\begin_inset Formula $c$
+\end_inset
+
+, dikondisikan hanya pada data latih 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+,
+\begin_inset Formula $\mathbf{t}$
+\end_inset
+
+.
+ Dua pilihan yang paling populer adalah:
+\end_layout
+
+\begin_layout Itemize
+Prior seragam: 
+\begin_inset Formula $P(T_{\mathrm{new}}=c|\mathbf{X},\mathbf{t})=\dfrac{1}{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Prior ukuran kelas: 
+\begin_inset Formula $P(T_{\mathrm{new}}=c|\mathbf{X},\mathbf{t})=\dfrac{N_{c}}{N}$
+\end_inset
+
+, di mana 
+\begin_inset Formula $N$
+\end_inset
+
+ adalah jumlah objek yang ada pada data latih dan 
+\begin_inset Formula $N_{c}$
+\end_inset
+
+ adalah jumlah objek pada data latih yang tergolong kelas-
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Contoh: kondisional kelas Gaussian
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(\mathbf{x}_{n}|\mathbf{t}_{n}=c,\mathbf{X},\mathbf{t})=\mathcal{N}(\boldsymbol{\mu}_{c},\Sigma_{c})
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
