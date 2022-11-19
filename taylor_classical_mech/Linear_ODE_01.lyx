@@ -1,0 +1,268 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Operator diferensial linear
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D=\frac{\mathrm{d}^{2}}{\mathrm{d}t^{2}}+2\beta\frac{\mathrm{d}}{\mathrm{d}t}+\omega_{0}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dengan menggunakan notasi ini, dapat ditulis
+\begin_inset Formula 
+\[
+Dx=f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Operator linear:
+\begin_inset Formula 
+\[
+D(ax)=aDx
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D(x_{1}+x_{2})=Dx_{1}+Dx_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D(ax_{1}+bx_{2})=aDx_{1}+bDx_{2}
+\]
+
+\end_inset
+
+untuk sembarang konstanta 
+\begin_inset Formula $a$
+\end_inset
+
+ dan 
+\begin_inset Formula $b$
+\end_inset
+
+ dan dua fungsi 
+\begin_inset Formula $x_{1}(t)$
+\end_inset
+
+ dan 
+\begin_inset Formula $x_{2}(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Untuk osilator tanpa gaya luar:
+\begin_inset Formula 
+\[
+Dx=0
+\]
+
+\end_inset
+
+Persamaan ini juga sering disebut persamaan homogen, karena untuk setiap
+ suku yang terlibat hanya 
+\begin_inset Formula $x$
+\end_inset
+
+ atau salah satu dari turunannya tepat sekali.
+\end_layout
+
+\begin_layout Standard
+Persamaan 
+\begin_inset Formula $Dx=f$
+\end_inset
+
+ disebut juga dengan persamaan inhomogen, karena mengandung suku 
+\begin_inset Formula $f$
+\end_inset
+
+ yang tidak melibatkan 
+\begin_inset Formula $x$
+\end_inset
+
+ sama sekali.
+\end_layout
+
+\begin_layout Standard
+Misalkan kita telah mendapatkan suatu solusi, 
+\begin_inset Formula $x_{p}(t)$
+\end_inset
+
+ yang memenuhi
+\begin_inset Formula 
+\begin{equation}
+Dx_{p}=f\label{eq:Taylor_5_53}
+\end{equation}
+
+\end_inset
+
+Solusi 
+\begin_inset Formula $x_{p}(t)$
+\end_inset
+
+ ini disebut sebagai solusi khusus (particular solution).
+\end_layout
+
+\begin_layout Standard
+Tinjau persamaan homogen 
+\begin_inset Formula $Dx=0$
+\end_inset
+
+ dan misalkan kita telah mendapatkan solusi 
+\begin_inset Formula $x_{h}(t)$
+\end_inset
+
+ yang memenuhi
+\begin_inset Formula 
+\[
+Dx_{h}=0
+\]
+
+\end_inset
+
+Solusi ini disebut sebagai solusi homogen.
+ Untuk persamaan diferensial osilator harmonik:
+\begin_inset Formula 
+\[
+x_{h}(t)=C_{1}e^{r_{1}t}+C_{2}e^{r_{2}t}
+\]
+
+\end_inset
+
+di mana kedua suku eksponensial ini menuju nol untuk 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Jika 
+\begin_inset Formula $x_{p}$
+\end_inset
+
+ adalah solusi khusus dari 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Taylor_5_53"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, maka 
+\begin_inset Formula $x_{p}+x_{h}$
+\end_inset
+
+ adalah satu solusi yang lain, karena
+\begin_inset Formula 
+\[
+D(x_{p}+x_{h})=Dx_{p}+Dx_{h}=f+0=f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

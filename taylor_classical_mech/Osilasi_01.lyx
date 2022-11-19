@@ -1,0 +1,844 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Osilasi / Vibrasi
+\end_layout
+
+\begin_layout Standard
+Referensi: Taylor Ch.
+ 5
+\end_layout
+
+\begin_layout Standard
+Hampir seluruh sistem yang mengalami pergeseran dari posisi ekuilibrium
+ (stabil) akan mengalami osilasi.
+\end_layout
+
+\begin_layout Standard
+Jika pergeseran yang terjadi 
+\begin_inset Quotes eld
+\end_inset
+
+cukup
+\begin_inset Quotes erd
+\end_inset
+
+ kecil, maka hampir dipastikan bahwa osilasi yang terjadi bersifat harmonik.
+\end_layout
+
+\begin_layout Standard
+Contoh: pendulum, struktur bangunan, dll
+\end_layout
+
+\begin_layout Section*
+Hukum Hooke
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Restoring force
+\emph default
+
+\begin_inset Formula 
+\[
+F_{x}(x)=-kx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k$
+\end_inset
+
+: konstanta (pegas), 
+\begin_inset Formula $x$
+\end_inset
+
+: simpangan massa dari keadaan stabil.
+\end_layout
+
+\begin_layout Standard
+Ketika 
+\begin_inset Formula $x=0,$
+\end_inset
+
+maka 
+\begin_inset Formula $F_{x}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ketika 
+\begin_inset Formula $x>0$
+\end_inset
+
+, maka 
+\begin_inset Formula $F_{x}<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ketika 
+\begin_inset Formula $x<0,$
+\end_inset
+
+maka 
+\begin_inset Formula $F_{x}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energi potensial:
+\begin_inset Formula 
+\[
+U(x)=\frac{1}{2}kx^{2}
+\]
+
+\end_inset
+
+Misalkan sistem berada pada posisi stabil pada 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+, biasanya diambil sebagai 0, 
+\begin_inset Formula $x_{0}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tinjau perilaku 
+\begin_inset Formula $U(x)$
+\end_inset
+
+ disekitar posisi setimbang, gunakan deret Taylor untuk ekspansi energi
+ potensial
+\begin_inset Formula 
+\[
+U(x)=U(0)+U'(0)x+\frac{1}{2}U''(x)x^{2}+\frac{1}{3!}U'''(x)x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+U(x)=U(0)+\left.\frac{\mathrm{d}U(x)}{\mathrm{d}x}\right|_{x=0}x+\frac{1}{2}\left.\frac{\mathrm{d}^{2}U(x)}{\mathrm{d}x^{2}}\right|_{x=0}x^{2}+\frac{1}{3!}\left.\frac{\mathrm{d}^{3}U(x)}{\mathrm{d}x^{3}}\right|_{x=0}x^{3}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Selama 
+\begin_inset Formula $x$
+\end_inset
+
+ bernilai cukup kecil, kita dapat mengambil tiga suku pertama dari ekspansi
+ ini.
+\end_layout
+
+\begin_layout Standard
+Suku pertama adalah konstan: 
+\begin_inset Formula $U(0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Karena 
+\begin_inset Formula $x=0$
+\end_inset
+
+ adalah titik ekuilibrium: 
+\begin_inset Formula $U'(0)$
+\end_inset
+
+ bernilai 0.
+\end_layout
+
+\begin_layout Standard
+Karena 
+\begin_inset Formula $x=0$
+\end_inset
+
+ adalah titik ekuilibrium stabil, maka 
+\begin_inset Formula $U''(0)$
+\end_inset
+
+ bernilai positif.
+\end_layout
+
+\begin_layout Standard
+Bisa diidentifikasi:
+\begin_inset Formula 
+\[
+k=U''(0)=\left.\frac{\mathrm{d}^{2}U(x)}{\mathrm{d}x^{2}}\right|_{x=0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gerak harmonik sederhana
+\end_layout
+
+\begin_layout Standard
+Gaya yang bekerja:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{x}(x)=-kx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menggunakan hukum Newton:
+\begin_inset Formula 
+\[
+m\frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}}=-kx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notasi di buku: 
+\begin_inset Formula $\ddot{x}\equiv\dfrac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\ddot{x}=\frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}}=-\frac{k}{m}x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}}=-\frac{k}{m}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}^{2}x}{\mathrm{d}t^{2}}=-\omega^{2}x
+\]
+
+\end_inset
+
+dengan
+\begin_inset Formula 
+\[
+\omega=\sqrt{\frac{k}{m}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[k]=\frac{[gaya]}{[jarak]}=\frac{kg\ m\ s^{-2}}{m}=kg\ s^{-2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[\omega]=\left(s^{-2}\right)^{1/2}=s^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\omega$
+\end_inset
+
+: frekuensi sudut, 
+\begin_inset Formula $\omega=2\pi f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Akan dicari 
+\begin_inset Formula $x(t)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Subsection*
+Solusi eksponensial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}(t)=e^{\mathrm{i}\omega t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x_{2}(t)=e^{-\mathrm{i}\omega t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cek:
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}^{2}x(t)}{\mathrm{d}t^{2}}=-\omega^{2}x(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk 
+\begin_inset Formula $x(t)=e^{\mathrm{i}\omega t}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}x(t)}{\mathrm{d}t}=\mathrm{i}\omega e^{\mathrm{i\omega t}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}^{2}x(t)}{\mathrm{d}t^{2}}=(\mathrm{i}\omega)^{2}e^{\mathrm{i\omega t}}=-\omega^{2}e^{\mathrm{i\omega t}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solusi umum:
+\begin_inset Formula 
+\begin{align*}
+x(t) & =C_{1}x_{1}(t)+C_{2}x_{2}(t)\\
+ & =C_{1}e^{\mathrm{i}\omega t}+C_{2}e^{-\mathrm{i}\omega t}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{1}$
+\end_inset
+
+dan 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ ditentukan dari syarat awal: 
+\begin_inset Formula $x(t=0)$
+\end_inset
+
+ dan 
+\begin_inset Formula $\dfrac{\mathrm{d}x}{\mathrm{d}t}(t=0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Solusi sinusoidal (sin dan cos)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{\pm\mathrm{i}\omega t}=\cos(\omega t)\pm\mathrm{i}\sin(\omega t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substitusi ke solusi umum:
+\begin_inset Formula 
+\begin{align*}
+x(t) & =(C_{1}+C_{2})\cos(\omega t)+\mathrm{i}(C_{1}-C_{2})\sin(\omega t)\\
+ & =B_{1}\cos(\omega t)+B_{2}\sin(\omega t)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{1}=C_{1}+C_{2}$
+\end_inset
+
+ dan 
+\begin_inset Formula $B_{2}=\mathrm{i}(C_{1}-C_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Turunan pertama:
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}x}{\mathrm{d}t}=-B_{1}\omega\sin(\omega t)+B_{2}\omega\cos(\omega t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh syarat awal (1):
+\begin_inset Formula 
+\[
+x(t=0)=x_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|\frac{\mathrm{d}x}{\mathrm{d}t}\right|_{t=0}=v_{0}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+maka 
+\begin_inset Formula $B_{1}=x_{0}$
+\end_inset
+
+ dan 
+\begin_inset Formula $B_{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Contoh syarat awal yang lain (2):
+\begin_inset Formula 
+\[
+x(t=0)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|\frac{\mathrm{d}x}{\mathrm{d}t}\right|_{t=0}=v_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+maka 
+\begin_inset Formula $B_{1}=0$
+\end_inset
+
+ dan 
+\begin_inset Formula $B_{2}=\dfrac{v_{0}}{\omega}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Phase-shifted cosine solution
+\end_layout
+
+\begin_layout Standard
+Definisikan konstanta lain:
+\begin_inset Formula 
+\[
+A=\sqrt{B_{1}^{2}+B_{2}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+: sisi miring segitiga
+\end_layout
+
+\begin_layout Standard
+Tuliskan kembali solusi
+\begin_inset Formula 
+\begin{align*}
+x(t) & =A\left[\frac{B_{1}}{A}\cos(\omega t)+\frac{B_{2}}{A}\sin(\omega t)\right]\\
+ & =A\left[\cos\delta\cos(\omega t)+\sin\delta\sin(\omega t)\right]\\
+ & =A\cos(\omega t-\delta)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta:$
+\end_inset
+
+ phase shift
+\end_layout
+
+\begin_layout Subsection*
+Real part of complex exponential
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{1}=\frac{1}{2}(B_{1}-\mathrm{i}B_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C_{2}=\frac{1}{2}(B_{1}+\mathrm{i}B_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{1}$
+\end_inset
+
+dan 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+ bernilai real, 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+dan 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+secara umum bernilai kompleks, dan saling konjugat kompleks.
+\begin_inset Formula 
+\[
+C_{2}=C_{1}^{*}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sehingga
+\begin_inset Formula 
+\[
+x(t)=C_{1}e^{\mathrm{i}\omega t}+C_{2}e^{-\mathrm{i}\omega t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x(t)=C_{1}e^{\mathrm{i}\omega t}+C_{1}^{*}e^{-\mathrm{i}\omega t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk sembarang bilangan kompleks 
+\begin_inset Formula $z=x+\mathrm{i}y$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z+z^{*}=(x+\mathrm{i}y)+(x-\mathrm{i}y)=2x=2\mathrm{Re}(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sehingga:
+\begin_inset Formula 
+\[
+x(t)=C_{1}e^{\mathrm{i}\omega t}+C_{1}^{*}e^{-\mathrm{i}\omega t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dapat ditulis menjadi
+\begin_inset Formula 
+\[
+x(t)=2\mathrm{Re}\left(C_{1}e^{\mathrm{i}\omega t}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x(t)=\mathrm{Re}\left(2C_{1}e^{\mathrm{i}\omega t}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definisikan 
+\begin_inset Formula $C=2C_{1}:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x(t)=\mathrm{Re}\left(Ce^{\mathrm{\mathrm{i}}\omega t}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C=B_{1}-\mathrm{i}B_{2}=Ae^{\mathrm{-i}\delta}=A\left(\cos\delta-\mathrm{i}\sin\delta\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substitusi 
+\begin_inset Formula $C$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+x(t) & =\mathrm{Re}\left(Ce^{\mathrm{\mathrm{i}}\omega t}\right)\\
+ & =\mathrm{Re}\left(Ae^{\mathrm{-i}\delta}e^{\mathrm{i}\omega t}\right)\\
+ & =\mathrm{Re}\left(Ae^{\mathrm{i}(\omega t-\delta)}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\end_body
+\end_document
