@@ -84,7 +84,7 @@ Operator diferensial linear
 \begin_layout Standard
 \begin_inset Formula 
 \[
-D=\frac{\mathrm{d}^{2}}{\mathrm{d}t^{2}}+2\beta\frac{\mathrm{d}}{\mathrm{d}t}+\omega_{0}^{2}
+\mathbb{D}=\frac{\mathrm{d}^{2}}{\mathrm{d}t^{2}}+2\beta\frac{\mathrm{d}}{\mathrm{d}t}+\omega_{0}^{2}
 \]
 
 \end_inset
@@ -93,10 +93,11 @@ D=\frac{\mathrm{d}^{2}}{\mathrm{d}t^{2}}+2\beta\frac{\mathrm{d}}{\mathrm{d}t}+\o
 \end_layout
 
 \begin_layout Standard
-dengan menggunakan notasi ini, dapat ditulis
+dengan menggunakan notasi ini, persamaan diferensial untuk osilator harmonik
+ terpaksa dapat ditulis menjadi
 \begin_inset Formula 
 \[
-Dx=f
+\mathbb{D}x=f
 \]
 
 \end_inset
@@ -105,26 +106,67 @@ Dx=f
 \end_layout
 
 \begin_layout Standard
-Operator linear:
+dengan 
+\begin_inset Formula $x$
+\end_inset
+
+ dan 
+\begin_inset Formula $f$
+\end_inset
+
+ adalah fungsi dari 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Perhatikan bahwa 
+\begin_inset Formula $\mathbb{D}$
+\end_inset
+
+ adalah operator linear, karena:
 \begin_inset Formula 
 \[
-D(ax)=aDx
+\mathbb{D}(ax)=a\mathbb{D}x
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+untuk suatu skalar 
+\begin_inset Formula $a$
+\end_inset
+
+ dan
 \begin_inset Formula 
 \[
-D(x_{1}+x_{2})=Dx_{1}+Dx_{2}
+\mathbb{D}(x_{1}+x_{2})=\mathbb{D}x_{1}+\mathbb{D}x_{2}
 \]
 
 \end_inset
 
+dengan 
+\begin_inset Formula $x_{1}$
+\end_inset
 
+ dan 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ adalah sembarang fungsi dari 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dua kondisi di atas dapat digabung menjadi:
 \begin_inset Formula 
 \[
-D(ax_{1}+bx_{2})=aDx_{1}+bDx_{2}
+\mathbb{D}(ax_{1}+bx_{2})=a\mathbb{D}x_{1}+b\mathbb{D}x_{2}
 \]
 
 \end_inset
@@ -146,13 +188,15 @@ untuk sembarang konstanta
 \end_inset
 
 .
+ Sembarang operator yang memenuhi syarat ini disebut operator linear.
 \end_layout
 
 \begin_layout Standard
-Untuk osilator tanpa gaya luar:
+Dengan menggunakan notasi ini, persamaan diferensial untuk osilator harmonik
+ tanpa gaya paksa atau gaya eksternal adalah:
 \begin_inset Formula 
 \[
-Dx=0
+\mathbb{D}x=0
 \]
 
 \end_inset
@@ -162,12 +206,8 @@ Persamaan ini juga sering disebut persamaan homogen, karena untuk setiap
 \begin_inset Formula $x$
 \end_inset
 
- atau salah satu dari turunannya tepat sekali.
-\end_layout
-
-\begin_layout Standard
-Persamaan 
-\begin_inset Formula $Dx=f$
+ atau salah satu dari turunannya tepat sekali, sedangkan persamaan 
+\begin_inset Formula $\mathbb{D}x=f$
 \end_inset
 
  disebut juga dengan persamaan inhomogen, karena mengandung suku 
@@ -189,7 +229,7 @@ Misalkan kita telah mendapatkan suatu solusi,
  yang memenuhi
 \begin_inset Formula 
 \begin{equation}
-Dx_{p}=f\label{eq:Taylor_5_53}
+\mathbb{D}x_{p}=f\label{eq:Taylor_5_53}
 \end{equation}
 
 \end_inset
@@ -203,7 +243,7 @@ Solusi
 
 \begin_layout Standard
 Tinjau persamaan homogen 
-\begin_inset Formula $Dx=0$
+\begin_inset Formula $\mathbb{D}x=0$
 \end_inset
 
  dan misalkan kita telah mendapatkan solusi 
@@ -213,7 +253,7 @@ Tinjau persamaan homogen
  yang memenuhi
 \begin_inset Formula 
 \[
-Dx_{h}=0
+\mathbb{D}x_{h}=0
 \]
 
 \end_inset
@@ -231,7 +271,15 @@ di mana kedua suku eksponensial ini menuju nol untuk
 \begin_inset Formula $t\rightarrow\infty$
 \end_inset
 
-.
+ (dengan syarat 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ tidak bernilai real positif).
 \end_layout
 
 \begin_layout Standard
@@ -253,11 +301,17 @@ noprefix "false"
 \begin_inset Formula $x_{p}+x_{h}$
 \end_inset
 
- adalah satu solusi yang lain, karena
+ adalah juga adalah satu solusi yang lain, karena juga memenuhi persamaan
+ diferensial 
+\begin_inset Formula $\mathbb{D}x=f$
+\end_inset
+
+:
 \begin_inset Formula 
-\[
-D(x_{p}+x_{h})=Dx_{p}+Dx_{h}=f+0=f
-\]
+\begin{align*}
+\mathbb{D}(x_{p}+x_{h}) & =\mathbb{D}x_{p}+\mathbb{D}x_{h}\\
+ & =f+0=f
+\end{align*}
 
 \end_inset
 
