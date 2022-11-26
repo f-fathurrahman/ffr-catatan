@@ -433,7 +433,7 @@ Untuk
 :
 \begin_inset Formula 
 \[
-\frac{\mathrm{d}x(t)}{\mathrm{d}t}=\mathrm{i}\omega e^{\mathrm{i\omega t}}
+\frac{\mathrm{d}x(t)}{\mathrm{d}t}=\mathrm{i}\omega e^{0\mathrm{i}\omega t}
 \]
 
 \end_inset
@@ -441,7 +441,7 @@ Untuk
 
 \begin_inset Formula 
 \[
-\frac{\mathrm{d}^{2}x(t)}{\mathrm{d}t^{2}}=(\mathrm{i}\omega)^{2}e^{\mathrm{i\omega t}}=-\omega^{2}e^{\mathrm{i\omega t}}
+\frac{\mathrm{d}^{2}x(t)}{\mathrm{d}t^{2}}=(\mathrm{i}\omega)^{2}e^{\mathrm{i}\omega t}=-\omega^{2}e^{\mathrm{i}\omega t}
 \]
 
 \end_inset
