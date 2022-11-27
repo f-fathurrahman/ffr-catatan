@@ -301,5 +301,133 @@ baik
  yang dekat dengan frekuensi natural dari osilator.
 \end_layout
 
+\begin_layout Standard
+Identifikasi sudut fasa 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+ Dengan membandingkan persamaan (5.62) dan (5.63):
+\begin_inset Formula 
+\[
+C=\frac{f_{0}}{\omega_{0}^{2}-\omega^{2}+2\mathrm{i}\beta\omega}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C=Ae^{-\mathrm{i}\delta}
+\]
+
+\end_inset
+
+diperoleh:
+\begin_inset Formula 
+\[
+\frac{f_{0}}{\omega_{0}^{2}-\omega^{2}+2\mathrm{i}\beta\omega}=Ae^{-\mathrm{i}\delta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+atau
+\begin_inset Formula 
+\[
+f_{0}e^{\mathrm{i}\delta}=A\left(\omega_{0}^{2}-\omega^{2}+2\mathrm{i}\beta\omega\right)
+\]
+
+\end_inset
+
+Karena 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ dan 
+\begin_inset Formula $A$
+\end_inset
+
+ sama-sama bernilai real, maka sudut fasa 
+\begin_inset Formula $\delta$
+\end_inset
+
+ sama dengan sudut fasa dari bilangan kompleks 
+\begin_inset Formula $\omega_{0}^{2}-\omega^{2}+2\mathrm{i}\beta\omega$
+\end_inset
+
+, yaitu
+\begin_inset Formula 
+\[
+\delta=\arctan\left(\frac{2\beta\omega}{\omega_{0}^{2}-\omega^{2}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solusi kompleks akhirnya dapat diperoleh
+\begin_inset Formula 
+\[
+z(t)=Ce^{\mathrm{i}\omega t}=Ae^{\mathrm{i}(\omega t-\delta)}
+\]
+
+\end_inset
+
+dan bagian real dari fungsi ini adalah solusi yang kita cari, yaitu:
+\begin_inset Formula 
+\[
+x(t)=A\cos(\omega t-\delta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solusi ini hanyalah satu solusi khusus dari persamaan gerak.
+ Solusi umum diperoleh dengan menambahkan sembarang solusi dari persamaan
+ homogon terkait, sehingga diperoleh solusi umum sebagai berikut
+\begin_inset Formula 
+\[
+x(t)=A\cos(\omega t-\delta)+C_{1}e^{r_{1}t}+C_{2}e^{r_{2}t}
+\]
+
+\end_inset
+
+Karena dua suku ekstra ada solusi umum ini merupakan eksponensial yang meluruh
+ (dengan asumsi bagian real dari 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ adalah bilangan negatif), maka suku-suku ini disebut sebagai suku transien.
+ Suku ini bergantung pada syarat awal, namum pada akhirnya akan tidak relevan
+ untuk perilaku solusi pada jangka panjang.
+ Oleh karena itu, suku cosinus (suku pertama) pada akhirnya akan mendominasi.
+\end_layout
+
+\begin_layout Standard
+Untuk kasus osilasi teredam, dua suku terakhir dapat ditulis sebagai cosinus
+ meluruh dengan pergeseran fasa:
+\begin_inset Formula 
+\[
+x(t)=A\cos(\omega t-\delta)+A_{\mathrm{tr}}e^{-\beta t}\cos(\omega_{1}-\delta_{\mathrm{tr}})
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
