@@ -1,0 +1,227 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{babel}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Sumber: Holzwarth, et al, PRB 55 2005 (1997) - Comparison of the projector
+ augmented-wave, pseudopotential, and linearized augmented-plane-wave formalisms
+ for density-functional calculations of solids
+\end_layout
+
+\begin_layout Standard
+Untuk 
+\begin_inset Formula $r\geq r_{c}^{a}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\widetilde{\phi}_{i}^{a}(\mathbf{r})=\phi_{i}^{a}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Valence electron density:
+\begin_inset Formula 
+\[
+n(\mathbf{r})=\widetilde{n}(\mathbf{r})+n^{1}(\mathbf{r})-\widetilde{n}^{1}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dengan, smooth density:
+\begin_inset Formula 
+\[
+\widetilde{n}(\mathbf{r})=\sum_{n\mathbf{k}}f_{n\mathbf{k}}\left|\widetilde{\Psi}_{n\mathbf{k}}(\mathbf{r})\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dua suku lain didesain agar saling menghilangkan pada daerah di luar bola
+ atomik dan akan mengkoreksi kerapatan elektron untuk sifat nodal yang benar
+ di sekitar atom.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+The last two contri- butions to Eq.4 are designed to exactly cancel each
+ other in the region outside the atomic spheres and to correct the density
+ for the correct nodal behavior in the vicinity of each atom.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Atomic density terms (untuk mengkoreksi bentuk nodal yang benar):
+\begin_inset Formula 
+\[
+n^{1}(\mathbf{r})=\sum_{a}n^{a}(\mathbf{r}-\mathbf{R}^{a})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n^{a}(\mathbf{r})=\sum_{n\mathbf{k},i,j}f_{n\mathbf{k}}\left\langle \widetilde{\Psi}_{n\mathbf{k}}|\widetilde{p}_{i}^{a}\right\rangle \left\langle \widetilde{p}_{i}^{a}|\widetilde{\Psi}_{n\mathbf{k}}\right\rangle \phi_{i}^{a*}(\mathbf{r})\phi_{j}^{a}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Koreksi untuk 
+\begin_inset Formula $\widetilde{n}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\widetilde{n}^{1}(\mathbf{r})=\sum_{a}\widetilde{n}^{a}(\mathbf{r}-\mathbf{R}^{a})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\widetilde{n}^{a}(\mathbf{r}-\mathbf{R}^{a})=\sum_{n\mathbf{k},i,j}f_{n\mathbf{k}}\left\langle \widetilde{\Psi}_{n\mathbf{k}}|\widetilde{p}_{i}^{a}\right\rangle \left\langle \widetilde{p}_{i}^{a}|\widetilde{\Psi}_{n\mathbf{k}}\right\rangle \widetilde{\phi}_{i}^{a*}(\mathbf{r})\widetilde{\phi}_{i}^{a}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Smooth frozen-core density dapat dihitung dari superposisi kisi, dievaluasi
+ pada ruang Fourier
+\begin_inset Formula 
+\[
+\widetilde{n}_{\mathrm{core}}(\mathbf{r})=\frac{1}{\Omega}\sum_{\mathbf{G}}\bar{\widetilde{n}}_{\mathrm{core}}(\mathbf{G})\ e^{\mathrm{i}\mathbf{G}\cdot\mathbf{r}}
+\]
+
+\end_inset
+
+di mana
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bar{\widetilde{n}}_{\mathrm{core}}(\mathbf{G})=\sum_{a}e^{-\mathrm{i}\mathbf{G}\cdot\mathbf{R}^{a}}\bar{\widetilde{n}}_{\mathrm{core}}(G)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\bar{\widetilde{n}}_{\mathrm{core}}(G)=\int_{0}^{\infty}\mathrm{d}r\ 4\pi r^{2}\ \widetilde{n}_{\mathrm{core}}^{a}(r)j_{0}(Gr)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -78,6 +78,122 @@
 \begin_body
 
 \begin_layout Standard
+Energi total:
+\begin_inset Formula 
+\[
+E=\sum_{n}f_{n}\left\langle \Psi_{n}\left|-\dfrac{1}{2}\nabla^{2}\right|\Psi_{n}\right\rangle +E_{H}\left[n+n_{Z}\right]+E_{xc}[n]
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $E_{H}\left[n+n_{Z}\right]$
+\end_inset
+
+ adalah energi Hartree dari kerapatan elektron 
+\begin_inset Formula $n$
+\end_inset
+
+ dan muatan titik dari nuklei 
+\begin_inset Formula $n_{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fungsi gelombang seluruh-elektron (all-electron, disingkat AE), diperoleh
+ dari fungsi gelombang semu (pseudo, disingkat PS) 
+\begin_inset Formula $\widetilde{\Psi}$
+\end_inset
+
+ melalui transformasi linear
+\begin_inset Formula 
+\[
+\left|\Psi\right\rangle =\left|\widetilde{\Psi}_{n}\right\rangle +\sum_{i}\left(\left|\phi_{i}\right\rangle -\left|\widetilde{\phi}_{i}\right\rangle \right)\left\langle \widetilde{p}_{i}\middle|\widetilde{\Psi}_{n}\right\rangle 
+\]
+
+\end_inset
+
+Indeks 
+\begin_inset Formula $i$
+\end_inset
+
+ adalah singkatan dari situs atomik 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+, momentum sudut 
+\begin_inset Formula $L=(l,m)$
+\end_inset
+
+ dan indeks tambahan 
+\begin_inset Formula $k$
+\end_inset
+
+ yang merupakan indeks dari energi (nilai eigen atomik) referensi 
+\begin_inset Formula $\epsilon_{kl}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ adalah gelombang parsial AE yang diperoleh dari atom referensi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\widetilde{\phi}_{i}$
+\end_inset
+
+ adalah gelombang parsial PS yang sama dengan gelombang parsial AE di luar
+ radius 
+\begin_inset Formula $r_{c}^{l}$
+\end_inset
+
+ (and match continuously onto 
+\begin_inset Formula $\widetilde{\phi}$
+\end_inset
+
+ inside the core radius).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\widetilde{p}_{i}$
+\end_inset
+
+ adalah fungsi proyektor yang merupakan dual dari gelombang parsial:
+\begin_inset Formula 
+\[
+\left\langle \widetilde{p}_{i}\middle|\widetilde{\phi}_{j}\right\rangle =\delta_{ij}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kerapatan elektron AE (apakah hanya untuk elektron valensi saja? cf.
+ Holzwarth, PRB 
+\series bold
+55
+\series default
+, 2005 (1997)):
+\begin_inset Formula 
+\[
+n(\mathbf{r})=\widetilde{n}(\mathbf{r})+n^{1}(\mathbf{r})-\widetilde{n}^{1}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Asumsi frozen core.
 \end_layout
 
