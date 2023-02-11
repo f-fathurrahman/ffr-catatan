@@ -1,0 +1,431 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "libertine-ntxm" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+PHYSICAL REVIEW B 79 241103(R) 2009
+\end_layout
+
+\begin_layout Standard
+Direct minimization technique for metals in density functional theory
+\end_layout
+
+\begin_layout Standard
+Christoph Freysoldt, Sixten Boeck, and Jörg Neugebauer
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "50col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Persamaan Kohn-Sham:
+\begin_inset Formula 
+\[
+\widehat{H}\left|\psi_{n}\right\rangle =\epsilon_{n}\left|\psi_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energi bebas:
+\begin_inset Formula 
+\[
+F\left[f_{n},\psi_{n}\right]=E\left[f_{n},\psi_{n}\right]-TS\left[f_{n}\right]
+\]
+
+\end_inset
+
+dimana 
+\begin_inset Formula $S$
+\end_inset
+
+ adalah entropi elektronik:
+\begin_inset Formula 
+\[
+S\left[f_{n}\right]=-k\sum_{n}f_{n}\ln f_{n}+(1-f_{n})\ln(1-f_{n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menggunakan pengali Lagrange 
+\begin_inset Formula $\lambda_{nn'}$
+\end_inset
+
+ dan 
+\begin_inset Formula $\mu$
+\end_inset
+
+ untuk menjaga ortonormalitas dan konservasi jumlah elektron, fungsional
+ yang akan dibuat menjadi stasioner menjadi
+\begin_inset Formula 
+\[
+L\left[f_{n},\psi_{n}\right]=F\left[f_{n},\psi_{n}\right]-\sum_{nn'}\lambda_{nn'}\left(\left\langle \psi_{n}|\psi_{n'}\right\rangle -\delta_{nn'}\right)-\mu\left(\sum_{n}f_{n}-N\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gradien dari 
+\begin_inset Formula $L$
+\end_inset
+
+ terhadap 
+\begin_inset Formula $\left\langle \psi_{n}\right|$
+\end_inset
+
+ diberikan oleh:
+\begin_inset Formula 
+\[
+\frac{\delta F}{\delta\left\langle \psi_{n}\right|}=f_{n}\widehat{H}\left|\psi_{n}\right\rangle -\sum_{n'}\lambda_{nn'}\left|\psi_{n'}\right\rangle 
+\]
+
+\end_inset
+
+Dengan mengalikan ekspresi ini dari kiri dengan 
+\begin_inset Formula $\left\langle \psi_{n''}\right|$
+\end_inset
+
+ memberikan pengali Lagrange
+\begin_inset Formula 
+\[
+\lambda_{nn'}=f_{n}\left\langle \psi_{n'}\left|\widehat{H}\right|\psi_{n}\right\rangle 
+\]
+
+\end_inset
+
+Dengan memperhatikan bahwa
+\begin_inset Formula 
+\[
+\frac{\partial\left(TS\right)}{\partial f_{n}}=-kT\ln\left(\frac{f_{n}}{1-f_{n}}\right)=\left(\epsilon_{n}-\mu\right)
+\]
+
+\end_inset
+
+gradien terhadap okupansi adalah
+\begin_inset Formula 
+\[
+\frac{\partial L}{\partial f_{n}}=\left\langle \psi_{n}\left|\widehat{H}\right|\psi_{n}\right\rangle -\epsilon_{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Metode minimisasi langsung untuk energi bebas dihambat oleh dua hal.
+ Pertama, okupansi mungkin mendapatkan batas minimum pada 
+\begin_inset Formula $f=1$
+\end_inset
+
+ atau 
+\begin_inset Formula $f=0$
+\end_inset
+
+ , dimana gradien tidak menjadi nol.
+ Hal ini dapat diatasi dengan meminimumkan terdapat energi 
+\begin_inset Formula $\epsilon_{n}$
+\end_inset
+
+ dengan memperhatikan bahwa
+\begin_inset Formula 
+\[
+\frac{\partial f_{n}}{\partial(\epsilon_{n}-\mu)}=-\frac{f_{n}(1-f_{n})}{kT}
+\]
+
+\end_inset
+
+Kedua, 
+\begin_inset Formula $L$
+\end_inset
+
+ tidak invarian terhadap transformasi uniter:
+\begin_inset Formula 
+\[
+\left|\psi_{n}\right\rangle \rightarrow\sum_{n}U_{mn}\left|\psi_{m}\right\rangle 
+\]
+
+\end_inset
+
+di antara orbital dengan okupansi berbeda, meskipun gradien 
+\begin_inset Formula $\frac{\delta F}{\delta\left\langle \psi_{n}\right|}$
+\end_inset
+
+ dan 
+\begin_inset Formula $\frac{\partial L}{\partial f_{n}}$
+\end_inset
+
+ bernilai nol.
+ Dengan kata lain, 
+\begin_inset Formula $L$
+\end_inset
+
+ dapat menjadi stasioner di luar minimum yang diinginkan dari 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Oleh karena itu, variasi global dalam transformasi uniter harus diperhitungkan.
+\end_layout
+
+\begin_layout Standard
+Ide yang digunakan adalah mengkombinasikan 
+\begin_inset Formula $U_{mn}$
+\end_inset
+
+ dan 
+\begin_inset Formula $\epsilon_{n}$
+\end_inset
+
+ menjadi suatu matriks pseudo-Hamiltonian:
+\begin_inset Formula 
+\[
+\eta_{mm'}=\sum_{n}U_{mn}\epsilon_{n}U_{nm'}^{\dagger}
+\]
+
+\end_inset
+
+Pada minimum, 
+\begin_inset Formula $\eta$
+\end_inset
+
+, akan identik dengan Hamiltonian pada subruang dari fungsi gelombang.
+ Meskipun demikian, secara umum 
+\begin_inset Formula $\eta$
+\end_inset
+
+ akan diperlakukan secara independen.
+ Kemudian, didefinisikan
+\begin_inset Formula 
+\[
+\widetilde{L}\left[\psi_{m},\eta_{mm'}\right]:=L\left[\sum_{m}U_{mn}[\eta]\ \left|\psi_{m}\right\rangle ,f_{n}[\eta]\right]
+\]
+
+\end_inset
+
+Notasi 
+\begin_inset Formula $[\eta]$
+\end_inset
+
+ di sini digunakan untuk menekankan bahwa transformasi uniter dan okupansi
+ adalah fungsi dari 
+\begin_inset Formula $\eta$
+\end_inset
+
+, akan tetapi pada penjabaran selanjutnya hal ini akan dihilangkan.
+\end_layout
+
+\begin_layout Standard
+Dalam prakteknya, 
+\begin_inset Formula $U$
+\end_inset
+
+ dan 
+\begin_inset Formula $\epsilon_{n}$
+\end_inset
+
+ akan diperoleh dengan cara mendiagonalisasi 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+ Okupansi diperoleh dari 
+\begin_inset Formula $\epsilon_{n}$
+\end_inset
+
+ melalui
+\begin_inset Formula 
+\[
+f_{n}=\left\{ 1+\exp\left[(\epsilon_{n}-\mu)/kT\right]\right\} ^{-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan syarat
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\eta_{mm'}}\sum f_{n}=0
+\]
+
+\end_inset
+
+ dapat diturunkan:
+\begin_inset Formula 
+\[
+\frac{\partial\mu}{\partial\eta_{mm'}}=\frac{\sum_{n}f_{n}(1-f_{n})U_{nm}^{\dagger}U_{m'n}}{\sum_{n}f_{n}(1-f_{n})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\widetilde{L}$
+\end_inset
+
+ akan invarian terdapat transformasi uniter 
+\begin_inset Formula $\widetilde{U}$
+\end_inset
+
+ ketika 
+\begin_inset Formula $\psi_{m}$
+\end_inset
+
+ dan 
+\begin_inset Formula $\eta_{mm'}$
+\end_inset
+
+ ditransformasikan secara bersamaan menggunakan
+\begin_inset Formula 
+\[
+\psi_{m}\rightarrow\sum_{p}\widetilde{U}_{pm}\psi_{p}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\eta_{mm'}\rightarrow\sum_{pp'}\widetilde{U}_{mp}^{\dagger}\eta_{pp'}\widetilde{U}_{p'm'}
+\]
+
+\end_inset
+
+Persamaan dapat disederhakan jika transformasi tersebut dipilih sedemikian
+ rupa sehingga 
+\begin_inset Formula $\eta$
+\end_inset
+
+ menjadi diagonal pada setiap titik.
+ Dengan pemilihan gauge berikut ini:
+\begin_inset Formula 
+\[
+U_{mn}=\delta_{mn}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|\widetilde{\psi}_{n}\right\rangle =\left|\psi_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gradien:
+\begin_inset Formula 
+\[
+\left|g_{n}^{\psi}\right\rangle :=\frac{\delta\widetilde{L}}{\delta\left\langle \psi_{n}\right|}=f_{n}\left(1-\sum_{n'}\left|\psi_{n'}\right\rangle \left\langle \psi_{n'}\right|\right)H\left|\psi_{n}\right\rangle 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
