@@ -78,19 +78,31 @@
 \begin_body
 
 \begin_layout Standard
+\noindent
+\align center
 PHYSICAL REVIEW B 84, 035117 (2011)
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 Self-consistent meta-generalized gradient approximation within the projector-aug
 mented-wave method
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 Jianwei Sun, Martijn Marsman, Gabor I.
  Csonka, Adrienn Ruzsinszky, Pan Hao, Yoon-Suk Kim, Georg Kresse, and John
  P.
  Perdew
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+*****
 \end_layout
 
 \begin_layout Standard
@@ -236,16 +248,28 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 PRL 115, 036402 (2015)
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 Strongly Constrained and Appropriately Normed Semilocal Density Functional
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
 Jianwei Sun, Adrienn Ruzsinszky, and John P.
- Perdew (2015) 
+ Perdew (2015)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+***
 \end_layout
 
 \begin_layout Standard
