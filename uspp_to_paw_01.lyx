@@ -285,5 +285,222 @@ di mana momen total dari
  (dengan konvensi bahwa muatan elektron adalah +1).
 \end_layout
 
+\begin_layout Standard
+SKIPPED
+\end_layout
+
+\begin_layout Standard
+Ekspresi untuk energi total
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=\widetilde{E}+E^{1}-\widetilde{E}^{1}
+\]
+
+\end_inset
+
+dengan
+\begin_inset Formula 
+\[
+\widetilde{E}=\sum_{n}f_{n}\left\langle \widetilde{\Psi}_{n}\left|-\frac{1}{2}\nabla^{2}\right|\widetilde{\Psi}_{n}\right\rangle +E_{\mathrm{xc}}\left[\widetilde{n}+\widehat{n}+\widetilde{n}_{c}\right]+E_{\mathrm{H}}\left[\widetilde{n}+\widehat{n}\right]+\int V_{\mathrm{H}}\left[\widetilde{n}_{Zc}\right]\left[\widetilde{n}(\mathbf{r})+\widehat{n}(\mathbf{r})\right]\ \mathrm{d}\mathbf{r}+U(\mathbf{R},Z_{\mathrm{ion}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E^{1}=\sum_{i,j}\rho_{ij}\left\langle \phi_{i}\left|-\frac{1}{2}\nabla^{2}\right|\phi_{j}\right\rangle +\overline{E_{\mathrm{xc}}\left[n^{1}+n_{c}\right]}+\overline{E_{\mathrm{H}}\left[n^{1}\right]}+\int_{\Omega_{r}}V_{\mathrm{H}}\left[n_{Zc}\right]n^{1}(\mathbf{r})\ \mathrm{d}\mathbf{r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\widetilde{E}^{1}=\sum_{i,j}\rho_{ij}\left\langle \widetilde{\phi}_{i}\left|-\frac{1}{2}\nabla^{2}\right|\widetilde{\phi}_{j}\right\rangle +\overline{E_{\mathrm{xc}}\left[\widetilde{n}^{1}+\widehat{n}+\widetilde{n}_{c}\right]}+\overline{E_{\mathrm{H}}\left[\widetilde{n}^{1}+\widehat{n}\right]}+\int_{\Omega_{r}}V_{\mathrm{H}}\left[\widetilde{n}_{Zc}\right]\left[\widetilde{n}^{1}(\mathbf{r})+\widehat{n}(\mathbf{r})\right]\ \mathrm{d}\mathbf{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Perhatikan bahwa 
+\begin_inset Formula $\widetilde{E}$
+\end_inset
+
+ mirip dengan fungsional energi dari formulasi USPP jika 
+\begin_inset Formula $\widehat{n}$
+\end_inset
+
+ diasosiasikan dengan pseudized augmentation charges pada USPP.
+\end_layout
+
+\begin_layout Standard
+Relasi dengan USPP
+\end_layout
+
+\begin_layout Standard
+Persamaan untuk formulasi USPP dapat diperoleh dari fungsional energi total
+ PAW (termodifikasi), Pers.
+ (21)-(23) melalui linearisasi Pers.
+ (22) dan Pers.
+ (23) disekitar okupansi atom referensi 
+\begin_inset Formula $\rho_{ij}^{a}$
+\end_inset
+
+.
+ Misalkan densitas yang diperoleh dengan okupansi tersebut adalah 
+\begin_inset Formula $n_{a}^{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\widetilde{n}_{a}^{1}$
+\end_inset
+
+, dan 
+\begin_inset Formula $\widehat{n}_{a}$
+\end_inset
+
+.
+ Linearisasi dari suku XC dan Hartree dari 
+\begin_inset Formula $E^{1}$
+\end_inset
+
+ disekitar 
+\begin_inset Formula $n_{a}^{1}$
+\end_inset
+
+ memberikan
+\begin_inset Formula 
+\[
+E_{\mathrm{xc}}\left[n_{a}^{1}+n_{c}\right]+E_{\mathrm{H}}\left[n_{a}^{1}\right]+\int\left(V_{\mathrm{xc}}\left[n_{a}^{1}+n_{c}\right]+V_{\mathrm{H}}\left[n_{a}^{1}\right]\right)\left(n^{1}(\mathbf{r})-n_{a}^{1}(\mathbf{r})\right)\ \mathrm{d}\mathbf{r}
+\]
+
+\end_inset
+
+Dengan menggunakan ekspresi untuk 
+\begin_inset Formula $n^{1}(\mathbf{r})$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+n^{1}(\mathbf{r})=\sum_{i,j}\rho_{ij}\left\langle \phi_{i}|\mathbf{r}\right\rangle \left\langle \mathbf{r}|\phi_{j}\right\rangle 
+\]
+
+\end_inset
+
+diperoleh
+\begin_inset Formula 
+\[
+E^{1}=C+\sum_{i,j}\rho_{ij}\left\langle \phi_{i}\left|V_{\mathrm{xc}}\left[n_{a}^{1}+n_{c}\right]+V_{\mathrm{H}}\left[n_{a}^{1}\right]\right|\phi_{j}\right\rangle 
+\]
+
+\end_inset
+
+Dua suku yang lain, yaitu energi kinetik dan interaksi elektrostatik antara
+ core-valence sudah linear dalam 
+\begin_inset Formula $\rho_{ij}$
+\end_inset
+
+ dan jika dikombinasikan dengan Pers.
+ (29) diperoleh aproksimasi untuk 
+\begin_inset Formula $E^{1}$
+\end_inset
+
+ dalam orde pertama dari okupansi 
+\begin_inset Formula $\rho_{ij}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+E^{1}\approx C+\sum_{i,j}\rho_{ij}\left\langle \phi_{i}\left|-\frac{1}{2}\nabla^{2}+V_{\mathrm{eff}}^{a}\right|\phi_{j}\right\rangle 
+\]
+
+\end_inset
+
+dengan
+\begin_inset Formula 
+\[
+V_{\mathrm{eff}}^{a}=V_{\mathrm{H}}\left[n_{a}^{1}+n_{Zc}\right]+V_{\mathrm{xc}}\left[n_{a}^{1}+n_{c}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Potential lokal 
+\begin_inset Formula $V_{\mathrm{eff}}^{a}$
+\end_inset
+
+ tidak lain adalah potensial AE dalam atom referensi.
+\end_layout
+
+\begin_layout Standard
+Linearisasi yang sama dapat diaplikasikan untuk 
+\begin_inset Formula $\widetilde{E}^{1}$
+\end_inset
+
+, dengan memperhitungkan bahwa 
+\begin_inset Formula $\widetilde{n}^{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $\widehat{n}$
+\end_inset
+
+ bergantung pada okupansi 
+\begin_inset Formula $\rho_{ij}$
+\end_inset
+
+.
+ Hasil akhir yang diperoleh adalah
+\begin_inset Formula 
+\[
+\widetilde{E}^{1}\approx\widetilde{C}+\sum_{i,j}\left[\rho_{ij}\left\langle \widetilde{\phi}_{i}\left|-\frac{1}{2}\nabla^{2}+\widetilde{V}_{\mathrm{eff}}^{a}\right|\widetilde{\phi}_{j}\right\rangle +\int\widehat{Q}_{ij}^{L}(\mathbf{r})\widetilde{V}_{\mathrm{eff}}^{a}(\mathbf{r})\ \mathrm{d}\mathbf{r}\right]
+\]
+
+\end_inset
+
+dengan
+\begin_inset Formula 
+\[
+\widetilde{V}_{\mathrm{eff}}^{a}=V_{\mathrm{H}}\left[\widetilde{n}_{a}^{1}+\widetilde{n}_{a}+\widetilde{n}_{Zc}\right]+V_{\mathrm{xc}}\left[\widetilde{n}_{a}^{1}+\widetilde{n}_{a}+\widetilde{n}_{c}\right]
+\]
+
+\end_inset
+
+adalah pseudopotensial atomik lokal pada atom referensi.
+\end_layout
+
+\begin_layout Standard
+Dengan menggabungkan antara dua ekspresi terlinearisasi tersebut dengan
+ 
+\begin_inset Formula $\widetilde{E}$
+\end_inset
+
+ diperoleh:
+\begin_inset Formula 
+\begin{align*}
+E & =\sum_{n}f_{n}\left\langle \widetilde{\Psi}_{n}\left|-\frac{1}{2}\nabla^{2}+\sum_{i,j}\left|\widetilde{p}_{i}\right\rangle \left\langle \widetilde{p}_{j}\right|G_{ij}^{US}\right|\widetilde{\Psi}_{n}\right\rangle +E_{\mathrm{xc}}\left[\widetilde{n}+\widehat{n}+\widetilde{n}_{c}\right]+E_{\mathrm{H}}\left[\widetilde{n}+\widehat{n}\right]\\
+ & +\int V_{\mathrm{H}}\left[\widetilde{n}_{Zc}\right]\left[\widetilde{n}(\mathbf{r})+\widehat{n}(\mathbf{r})\right]\ \mathrm{d}\mathbf{r}+U(\mathbf{R},Z_{\mathrm{ion}})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
