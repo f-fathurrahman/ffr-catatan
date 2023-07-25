@@ -1,0 +1,115 @@
+---
+title: Fungsional Pertukaran-Korelasi
+format:
+  revealjs:
+    smaller: true
+    scrollable: true
+---
+
+## Sumber
+
+Martin, Ch 8
+
+## Bentuk XC yang sederhana
+
+$$
+E_{\mathrm{xc}} = \int \mathrm{d}\mathbf{r}\, n(\mathbf{r}) \epsilon_{\mathrm{xc}}([n],\mathbf{r})
+$$
+
+di mana $\epsilon_{\mathrm{xc}}([n], \mathbf{r})$ adalah energi korelasi pertukaran
+per elektron pada titik $\mathbf{r}$, yang bergantung pada kerapatan $n(\mathbf{r},\sigma)$
+di sekitar titik $\mathbf{r}$.
+Karena energi Hartree memperhitungkan interaksi Coulomb rata-rata, energy potensial
+dari interaksi per elektron $\epsilon_{\mathrm{xc}}([n], \mathbf{r})$ melibatkan
+fungsi kerapatan probabilitas gabungan (joint probability function) untuk setiap
+pasangan elektron dikurangi dengan suku energi Hartree.
+
+
+$$
+\epsilon_{\mathrm{xc}}^{\mathrm{int}}([n], \mathbf{r}) =
+\frac{1}{2} \int \mathrm{d}\mathbf{r}'
+\frac{n_{\mathrm{xc}}(\mathbf{r},\mathbf{r}')}{\left| \mathbf{r} - \mathbf{r}' \right|}
+$$
+
+
+## LSDA
+
+$$
+\begin{align}
+E_{\mathrm{xc}}^{\mathrm{LSDA}}[n^{\uparrow},n^{\downarrow}] & =
+\int \mathrm{d}\mathbf{r} \, n(\mathbf{r}) \,
+\mathrm{\epsilon}_{\mathrm{xc}}(n^{\uparrow}(\mathbf{r}),n^{\downarrow}(\mathbf{r})) \\
+& = \int \mathrm{d}\mathbf{r} \, n(\mathbf{r}) \,
+\left[
+\mathrm{\epsilon}^{\mathrm{hom}}_{\mathrm{x}}(n^{\uparrow}(\mathbf{r}),n^{\downarrow}(\mathbf{r})) +
+\mathrm{\epsilon}^{\mathrm{hom}}_{\mathrm{c}}(n^{\uparrow}(\mathbf{r}),n^{\downarrow}(\mathbf{r}))
+\right]
+\end{align}
+$$
+
+Fractional spin polarization $\zeta(\mathbf{r})$:
+$$
+\zeta(\mathbf{r}) = \frac{n^{\uparrow}(\mathbf{r}) - n^{\downarrow}(\mathbf{r})}{n(\mathbf{r})}
+$$
+
+
+## GGA
+
+$$
+\begin{align}
+E_{\mathrm{xc}}^{\mathrm{LSDA}}[n^{\uparrow},n^{\downarrow}] & =
+\int \mathrm{d}\mathbf{r} \, n(\mathbf{r}) \, \epsilon_{\mathrm{xc}}\left(
+  n^{\uparrow},n^{\downarrow},
+\left| \nabla n^{\uparrow} \right|, \left| \nabla n^{\downarrow} \right|
+\right) \\
+& \equiv 
+\int \mathrm{d}\mathbf{r} \, n(\mathbf{r}) \, \epsilon_{\mathrm{xc}}(n(\mathbf{r})) \,
+F_{\mathrm{xc}}\left(
+  n^{\uparrow},n^{\downarrow},
+\left| \nabla n^{\uparrow} \right|, \left| \nabla n^{\downarrow} \right|
+\right)
+\end{align}
+$$
+di mana $F_{\mathrm{xc}}$ adalah suatu fungsi faktor yang tidak berdimensi dan
+$\epsilon^{\mathrm{hom}}_{\mathrm{xc}}(n)$ adalah energi pertukaran dari gas tak perpolarisasi.
+
+$$
+E_{\mathrm{x}} = -\frac{3}{4\pi} \left( \frac{9\pi}{4} \right)^{1/3} \frac{1}{r_{s}}
+$$
+
+
+Untuk fungsional pertukaran:
+$$
+E\left[ n^{\uparrow}, n^{\downarrow} \right] = \frac{1}{2} \left(
+ E_{\mathrm{x}}[2n^{\uparrow}] + E_{\mathrm{x}}[2n^{\downarrow}]
+\right)
+$$
+
+Hal ini dikenal sebagai **spin-scaling relation**.
+
+Gradien kerapatan-tereduksi orde-$m$
+(reduced-density gradien of $m$-th order):
+$$
+s_{m} = \frac{\left| \nabla^{m} n \right|}{(2k_{F})^{m}n} =
+\frac{\left| \nabla^{m} n \right|}{2^{m} (3\pi^2)^{m/3} n^{(1 + m/3)}}
+$$
+
+Orde-1:
+$$
+s_{1} \equiv s = \frac{\left| \nabla n \right|}{(2k_F)n} =
+\frac{\left| \nabla r_{s} \right|}{2(2\pi/3)^{1/3}r_{s}}
+$$
+
+Ekspansi untuk $F_{x}$:
+$$
+F_{x} = 1 + \frac{10}{81}s_{1}^{2} + \frac{146}{2025}s_{2}^2
+$$
+
+(TODO: check exponent of $s_1$)
+
+Exchange enhancement factor $F_{\mathrm{x}}(n,s)$
+
+Untuk fungsional korelasi:
+$$
+
+$$
