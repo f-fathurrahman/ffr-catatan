@@ -1,0 +1,107 @@
+---
+title: Fungsional
+author: Fadjar Fathurrahman
+format:
+  revealjs:
+    width: 1280
+    smaller: true
+    scrollable: true
+---
+
+## Fungsional
+
+Fungsi $f(x)$: pemetaan suatu variabel atau bilangan $x$ ke bilangan lain, misalnya $y = f(x)$.
+
+Fungsional $F[f]$: pemetaan suatu fungsi $f$ ke suatu bilangan $y = F[f]$.
+
+Nilai dari fungsional $F[f]$ bergantung dari fungsi $f(x)$
+
+
+
+
+## Contoh
+
+- Integral tentu dari $w(x) f(x)$ di mana $w(x)$ adalah suatu fungsi bobot tertentu:
+$$
+I_{w}[f] = \int_{x_{\mathrm{min}}}^{x_{\mathrm{max}}} w(x) f(x) \, \mathrm{d}x
+$$
+
+- Integral dari $(f(x))^{\alpha}$ di mana $\alpha$ adalah pangkat sembarang (bilangan bulat?):
+$$
+I_{\alpha}[f] = \int_{x_{\mathrm{min}}}^{x_{\mathrm{max}}} (f(x))^{\alpha}\, \mathrm{d}x
+$$
+
+
+## Turunan Fungsional
+
+Functional derivative
+
+Variasi fungsional:
+$$
+\delta F[f] = F[f + \delta f] - F[f] =
+\int_{x_{\mathrm{min}}}^{x_{\mathrm{max}}} \frac{\delta F}{\delta f(x)} \delta f(x) \, \mathrm{d}x
+$$
+
+di mana kuantitas $\dfrac{\delta F}{\delta f(x)}$ adalah turunan fungsional
+dari $F$ terhadap variasi dari $f(x)$ pada titik $x$.
+
+Fungsional yang linear dalam $f(x)$ memberikan turunan fungsional:
+$$
+\frac{\delta I_{w}}{\delta f(x)} = w(x)
+$$
+
+Untuk fungsional pangkat:
+$$
+\frac{\delta I_{\alpha}}{\delta f(x)} = \alpha (f(x))^{\alpha - 1}
+$$
+yang mirip dengan aturan pada turunan biasa.
+
+Secara umum, turunan fungsi pada titik $x$ juga bergantung dari nilai fungsi
+$f(x)$ pada semua titik lain.
+
+
+## Fungsional-fungsional pada DFT
+
+Suku potensial eksternal memiliki bentuk linear.
+
+Suku Hartree juga sederhana karena bilinear
+
+Suku XC lebih kompleks.
+
+$$
+E_{\mathrm{xc}}[n] = \int n(\mathbf{r})
+\epsilon_{\mathrm{xc}}(n(\mathbf{r}), |\nabla n(\mathbf{r}|))\, \mathrm{d}\mathbf{r}
+$$
+
+Variasi dari suku gradient dapat diilustrasikan dengan meninjau bentuk umum
+$$
+I[g,f] = \int g(f(\mathbf{r}), |\nabla f(\mathbf{r}|))\, \mathrm{d}\mathbf{r}
+$$
+
+Dengan melakukan variasi dari $f$:
+$$
+\delta I[g,f] = \int \left[
+\frac{\delta g}{\delta f} \delta f(\mathbf{r}) + 
+\frac{\delta g}{\delta |\nabla f|} \delta |\nabla f(\mathbf{r})|
+\right]\, \mathrm{d}\mathbf{r}
+$$
+
+Dengan menggunakan
+$$
+\delta |\nabla f(\mathbf{r})| = \delta \nabla f(\mathbf{r}) \cdot
+\frac{\nabla f(\mathbf{r})}{|\nabla f(\mathbf{r})|} =
+\frac{\nabla f(\mathbf{r})}{|\nabla f(\mathbf{r})|} \cdot
+\nabla\left[ \delta f(\mathbf{r}) \right]
+$$
+
+Dengan menggunakan integrasi parsial:
+$$
+\delta I[g,f] = \int \left\{
+\frac{\delta g}{\delta f} - \nabla \cdot \left[
+  \frac{\delta g}{\delta |\nabla f|} \frac{f(\mathbf{r})}{|\nabla f(\mathbf{r})|}
+\right]
+\right\} \delta f(\mathbf{r})\, \mathrm{d}\mathbf{r}
+$$
+
+
+
