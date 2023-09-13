@@ -1,0 +1,414 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Numerov’s method (also called Cowell’s method) is a numerical method to
+ solve ordinary differential equations of second order in which the first-order
+ term does not appear.
+ It is a fourth-order linear multistep method.
+ The method is implicit, but can be made explicit if the differential equation
+ is linear.
+ Numerov’s method was developed by the Russian astronomer Boris Vasil’evich
+ Numerov.
+\end_layout
+
+\begin_layout Standard
+Diberikan persamaan diferensial dalam bentuk:
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}^{2}y}{\mathrm{d}x^{2}}=-g(x)y(x)+s(x);\qquad x\in[a,b]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+di mana 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ dan 
+\begin_inset Formula $s(x)$
+\end_inset
+
+ are continuous function on the domain 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Diskritisasi interval 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ menggunakan grid dengan jarak antara titik yang seragam, misalnya, 
+\begin_inset Formula $h=x_{n+1}-x_{n}$
+\end_inset
+
+.
+ Kemudian lakukan ekspansi deret Taylor dari 
+\begin_inset Formula $y(x)$
+\end_inset
+
+ di sekitar titik 
+\begin_inset Formula $x_{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+To derive the Numerov’s method, we first discretize the interval $$ using
+ equally spaced grid, where the grid space is $$.
+ We then proceed with the Taylor expansion of the function $y(x)$ around
+ the point $x_n$:
+\begin_inset Formula 
+\[
+\begin{align}y(x_{n+1}) & =y(x_{n})+y'(x_{n})h+\frac{y''(x_{n})}{2!}h^{2}+\frac{y'''(x_{n})}{3!}h^{3}\\[6pt]
+ & +\frac{y''''(x_{n})}{4!}h^{4}+\frac{y'''''(x_{n})}{5!}h^{5}+\frac{y''''''(x_{n})}{6!}h^{6}+\ldots
+\end{align}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Selain itu
+\begin_inset Formula 
+\[
+\begin{align}y(x_{n-1}) & =y(x_{n})-y'(x_{n})h+\frac{y''(x_{n})}{2!}h^{2}-\frac{y'''(x_{n})}{3!}h^{3}\\[6pt]
+ & +\frac{y''''(x_{n})}{4!}h^{4}-\frac{y'''''(x_{n})}{5!}h^{5}+\frac{y''''''(x_{n})}{6!}h^{6}+\ldots
+\end{align}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By summing the two equations, we have
+\begin_inset Formula 
+\[
+y_{n+1}-2y_{n}+y_{n-1}=h^{2}y_{n}''+\frac{h^{4}}{12}y_{n}''''+{\cal O}(h^{6})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get an expression for 
+\begin_inset Formula $y_{n}''''$
+\end_inset
+
+, remember that
+\begin_inset Formula 
+\[
+y_{n}''=-g_{n}y_{n}+s_{n}\equiv z_{n}
+\]
+
+\end_inset
+
+.
+ By repeating the same procedure we did above
+\begin_inset Formula 
+\[
+\begin{align}h^{2}y_{n}'''' & =z_{n+1}-2z_{n}+z_{n-1}+{\cal O}(h^{4})\\[6pt]
+ & =-g_{n+1}y_{n+1}+s_{n+1}+2g_{n}y_{n}-2s_{n}-g_{n-1}y_{n-1}+s_{n-1}+{\cal O}(h^{4})\\[6pt]
+\end{align}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we substitute this into the proceeding equation, we get
+\begin_inset Formula 
+\[
+\begin{align}y_{n+1}-2y_{n}+y_{n-1} & =h^{2}(-g_{n}y_{n}+s_{n})\\[6pt]
+ & +\frac{h^{2}}{12}(-g_{n+1}y_{n+1}+s_{n+1}+2g_{n}y_{n}-2s_{n}-g_{n-1}y_{n-1}+s_{n-1})+{\cal O}(h^{6})
+\end{align}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+atau
+\begin_inset Formula 
+\[
+y_{n+1}(1+\frac{h^{2}}{12}g_{n+1})-2y_{n}(1-\frac{5h^{2}}{12}g_{n})+y_{n-1}(1+\frac{h^{2}}{12}g_{n-1})=\frac{h^{2}}{12}(s_{n+1}+10s_{n}+s_{n-1})+{\cal O}(h^{6})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This yields the Numerov’s method if we ignore the term of order 
+\begin_inset Formula $h^{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{align}y_{n+1} & =\frac{{\displaystyle 2y_{n}(1-\frac{5h^{2}}{12}g_{n})-y_{n-1}(1+\frac{h^{2}}{12}g_{n-1})+\frac{h^{2}}{12}(s_{n+1}+10s_{n}+s_{n-1})}}{{\displaystyle 1+\frac{h^{2}}{12}g_{n+1}}}\\[6pt]
+ & =\frac{{\displaystyle (12-10f_{n})y_{n}-y_{n-1}f_{n-1}+\frac{h^{2}}{12}(s_{n+1}+10s_{n}+s_{n-1})}}{{\displaystyle f_{n+1}}}
+\end{align}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+di mana
+\begin_inset Formula 
+\[
+f_{n}=1+\frac{h^{2}}{12}g_{n}
+\]
+
+\end_inset
+
+It is easy to show that
+\begin_inset Formula 
+\[
+y_{n-1}=\frac{{\displaystyle (12-10f_{n})y_{n}-y_{n+1}f_{n+1}+\frac{h^{2}}{12}(s_{n+1}+10s_{n}+s_{n-1})}}{{\displaystyle f_{n-1}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With this relation, we can now find the value of 
+\begin_inset Formula $y(x_{n+1})$
+\end_inset
+
+ given two previous values 
+\begin_inset Formula $y(x_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $y(x_{n-1})$
+\end_inset
+
+.
+ All we have to do to find an approximate solution is to find the values
+ 
+\begin_inset Formula $y(x_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $y(x_{2})$
+\end_inset
+
+ at the first two points 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, then we use the Numerov’s method to find the value of all following points
+ in the interval 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Case 1.
+ Hydrogen-like atom
+\end_layout
+
+\begin_layout Standard
+The Schrödinger equation for hydrogen-like atom is:
+\begin_inset Formula 
+\[
+\left[-\frac{\hbar^{2}}{2m}\nabla^{2}-\frac{Ze^{2}}{4\pi\varepsilon_{0}r}\right]\psi(\mathbf{r})=E\psi(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, we assume that there is only one electron and thus neglecting the
+ Coulomb interaction between the electrons.
+ By variable separation, the wavefunction can be written as 
+\begin_inset Formula $\psi(\mathbf{r})=\frac{u(r)}{r}Y_{lm}({\hat{r}})$
+\end_inset
+
+, where 
+\begin_inset Formula $Y_{lm}({\hat{r}})$
+\end_inset
+
+ is the spherical harmonics and 
+\begin_inset Formula $u(r)$
+\end_inset
+
+ follows the equation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{\hbar^{2}}{2m}u''+\left[\frac{\hbar^{2}}{2m}\frac{l(l+1)}{r^{2}}-\frac{Ze^{2}}{4\pi\varepsilon_{0}r}-E\right]u(r)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Introducing the dimensionless variables
+\begin_inset Formula 
+\[
+\begin{align}x=\frac{r}{a_{0}}; & \qquad a_{0}=\frac{4\pi\varepsilon_{0}\hbar^{2}}{me^{2}}\approx0.529\,\AA\\
+\epsilon=\frac{E}{E_{0}}; & \qquad E_{0}=\frac{\hbar^{2}}{2ma_{0}^{2}}=1\,\text{Ry}\approx13.60\,\text{eV}
+\end{align}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ is the Bohr radius and 
+\begin_inset Formula $E_{0}$
+\end_inset
+
+ is the Rydberg energy.
+\end_layout
+
+\begin_layout Standard
+The equation for 
+\begin_inset Formula $u(r)$
+\end_inset
+
+ then becomes
+\begin_inset Formula 
+\[
+u''(x)-\left[\frac{l(l+1)}{x^{2}}-\frac{2Z}{x}-\epsilon\right]u(x)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The boundary conditions are
+\begin_inset Formula 
+\[
+u(0)=0;\qquad u(\infty)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
