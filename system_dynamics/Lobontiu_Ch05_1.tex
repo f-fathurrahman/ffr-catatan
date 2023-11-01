@@ -1,6 +1,9 @@
 \documentclass[a4paper]{article}
 \usepackage{amsmath}
 
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+
 \begin{document}
 
 \title{Sistem Fluida dan Termal}
@@ -18,10 +21,21 @@ Besaran ini dilambangkan dengan $q_{v}$.
 Pada sistem pneumatik, laju alirah massa (\textit{mass flow rate}) yang akan digunakan.
 Besaran ini dilambangkan dengan $q_{m}$.
 
-Hubungan antara $q_{v}$ dan $q_{m}$ adalah:
+Hubungan antara $q_{v}$ dan $q_{m}$ dapat dinyatakan dalam persamaan berikut:
+\begin{equation*}
+q_m = \rho q_v
+\end{equation*}
+dengan $\rho$ adalah kerapatan massa. Hal ini dapat dilihat dari definisi
 \begin{equation*}
 q_v = \frac{\Delta vol}{\Delta t} = \frac{A \, \Delta x}{\Delta t} = v \, A
 \end{equation*}
-
+dan
+\begin{equation*}
+q_m = \frac{\Delta m}{\Delta t} = \rho \frac{\Delta vol}{\Delta t} = \rho \, q_v
+\end{equation*}
+di mana $vol$ menyatakan volume,
+$\Delta x$: kecepatan elemen fluida,
+$\Delta x$ adalah jarak yang ditempuh oleh elemen fluida,
+$A$: luas daerah yang tegak lurus dengan arah aliran fluida.
 
 \end{document}

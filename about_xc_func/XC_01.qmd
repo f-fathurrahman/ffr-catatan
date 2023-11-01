@@ -109,7 +109,45 @@ $$
 
 Exchange enhancement factor $F_{\mathrm{x}}(n,s)$
 
-Untuk fungsional korelasi:
+Untuk fungsional korelasi, ekspansi gradien orde rendah (Ma dan Brueckner):
+$$
+F_{c} = \frac{\epsilon_{\mathrm{c}}^{\mathrm{LDA}}(n)}{\epsilon_{\mathrm{x}}^{\mathrm{LDA}}(n)}
+\left( 1 - 0.21951 s_1^2 + \cdots \right)
 $$
 
+## Potensial pertukaran dan korelasi
+
+$V_{\mathrm{xc}}^{\sigma}(\mathbf{r})$
+
+Untuk LDA:
 $$
+\delta E_{\mathrm{xc}}[n] = \sum_{\sigma} \int \mathrm{d}\mathbf{r} \left[
+\epsilon_{\mathrm{xc}}^{\mathrm{hom}} +
+n \frac{\partial \epsilon_{\mathrm{xc}}^{\mathrm{hom}}}{\partial n^{\sigma}}
+\right]_{\mathbf{r},\sigma} \, \delta n(\mathbf{r},\sigma)
+$$
+sehingga diperoleh potensial:
+$$
+V_{\mathrm{xc}}^{\sigma}(\mathbf{r}) =
+\left[
+\epsilon_{\mathrm{xc}}^{\mathrm{hom}} +
+n \frac{\partial \epsilon_{\mathrm{xc}}^{\mathrm{hom}}}{\partial n^{\sigma}}
+\right]_{\mathbf{r},\sigma}
+$$
+
+Potensial ini hanya melibatkan turunan biasa dari
+$\epsilon_{\mathrm{xc}}^{\mathrm{hom}}(n^{\uparrow},n^{\downarrow})$.
+
+Untuk GGA, potensial dapat diindentifikasi dengan menemukan perubahan
+$\delta E_{\mathrm{xc}}[n]$ pada orde linear dalam $\delta n$ dan
+$\delta \nabla n = \nabla \delta n$:
+$$
+\delta E_{\mathrm{xc}}[n] = \sum_{\sigma} \int \mathrm{d}\mathrm{r}
+\left[
+\epsilon_{\mathrm{xc}} + n\frac{\partial \epsilon_{\mathrm{xc}}}{\partial n^{\sigma}} +
+n \frac{\partial \epsilon_{\mathrm{xc}}}{\partial \nabla n^{\sigma}} \nabla
+\right]_{\mathbf{r},\sigma} \, \delta n(\mathbf{r},\sigma)
+$$
+Bentuk ini belum memiliki bentuk lokal, karena suku terakhir adalah operator diferensial.
+
+Tiga pendekatan:
